@@ -2,6 +2,7 @@ import { Controller, Get, Post, UseInterceptors, UploadedFile, Req } from '@nest
 import { FileInterceptor } from '@nestjs/platform-express';
 import { Request } from 'express';
 import { AppService } from './app.service';
+import { request } from 'http';
 
 @Controller()
 export class AppController {

@@ -45,9 +45,8 @@ nest start
 #### Get
 * /list-img : mostra a lista de imagens salvas no cloudnary
 #### Post
+(pode ser usando alguma ferramenta de REST, como o Thunder Client ou PostMan)
 * /send-img: recebe socitalçao POST com um arquivo("uma imagem"). ex: POST>body>form>files>"file":"/cachorrinho.png"
-a
-
 
 
 

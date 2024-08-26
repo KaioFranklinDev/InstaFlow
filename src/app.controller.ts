@@ -2,7 +2,6 @@ import { Controller, Get, Post, UseInterceptors, UploadedFile, Req } from '@nest
 import { FileInterceptor } from '@nestjs/platform-express';
 import { Request } from 'express';
 import { AppService } from './app.service';
-import { request } from 'http';
 
 @Controller()
 export class AppController {
@@ -13,9 +12,15 @@ export class AppController {
     return this.appService.getHello();
   }
 
+  @Get('list-img')
+  async getImages() {
+    return this.appService.listImages();
+  }
+
   @Post('abacatinho')
   @UseInterceptors(FileInterceptor('file'))
   recbePost(@UploadedFile() file: Express.Multer.File, @Req() request: Request) {
     return this.appService.recbePost({ request, file });
   }
 }
+

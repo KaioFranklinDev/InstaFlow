@@ -1,13 +1,12 @@
 # InstaFlow - API para o Envio e Gerenciamento de IMAGENS
 
-Este projeto realiza a monitoria de ligações telefônicas de um call center, utilizando a API da Fluxoti para obter as gravações das chamadas, o modelo Whisper para transcrição de áudios e a API da OpenAI para avaliar as ligações com uma pontuação de 0 a 100.
+API envia uma lista de IMAGENS salvas no cloudinary e recebe imagens e as sava no cloudinary. 
 
 ## Requisitos
 
 - Node.js v20.12.2
 - Bibliotecas Node: jwt, Nest
-- Chave de API da Cloudnary
-- Chave de API db
+- Chave de API da Cloudinary
 
 ## Instalação
 
@@ -41,13 +40,13 @@ nest start
 
 
 ## Arquitetura
-### O servidor contém as seguintes funções principais:
+### O servidor contém as seguintes rotas/funções principais:
 
 #### Get
-* /logout : encerra sessão
+* /list-img : mostra a lista de imagens salvas no cloudnary
 #### Post
-* /login: recebe dados pra entar
-* /singin : criar conta
+* /send-img: recebe socitalçao POST com um arquivo("uma imagem"). ex: POST>body>form>files>"file":"/cachorrinho.png"
+a
 
 
 
@@ -62,5 +61,5 @@ nest start
 
 ## Notas Adicionais
 
-- isntalar dependencias
+- faltando algumas features.
 

@@ -7,17 +7,12 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) { }
 
-  @Get('abacatinho')
-  getHello() {
-    return this.appService.getHello();
-  }
-
   @Get('list-img')
   async getImages() {
     return this.appService.listImages();
   }
 
-  @Post('abacatinho')
+  @Post('send-img')
   @UseInterceptors(FileInterceptor('file'))
   recbePost(@UploadedFile() file: Express.Multer.File, @Req() request: Request) {
     return this.appService.recbePost({ request, file });

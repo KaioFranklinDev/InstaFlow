@@ -14,11 +14,6 @@ cloudinary.v2.config({
 
 @Injectable()
 export class AppService {
-  getHello() {
-    return {
-      mensagem: "hallow"
-    };
-  }
 
   async listImages() {
     try {
